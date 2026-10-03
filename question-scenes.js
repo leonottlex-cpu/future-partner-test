@@ -1,0 +1,32 @@
+const questionScenes=[
+ {c:'scene-choice',i:'♡',j:'✦',t:'先选一个会出现在故事里的人'},
+ {c:'scene-boy',i:'☕',j:'♂',t:'一场还没被命名的见面'},
+ {c:'scene-girl',i:'✿',j:'♀',t:'衣架旁边的三秒心动'},
+ {c:'scene-alien',i:'✦',j:'◉',t:'来自另一颗星球的来电'},
+ {c:'scene-phone',i:'⌁',j:'♡',t:'手机屏幕亮了一下'},
+ {c:'scene-phone',i:'🐕',j:'⌁',t:'看到可爱的东西，想不想分享'},
+ {c:'scene-phone',i:'?',j:'◷',t:'消息没有按时出现'},
+ {c:'scene-phone',i:'☁',j:'♡',t:'各自忙着，但还在同一个世界'},
+ {c:'scene-speech',i:'…',j:'!',t:'情绪从哪里漏出来'},
+ {c:'scene-speech',i:'♡',j:'→',t:'想念要不要说出口'},
+ {c:'scene-speech',i:'🎁',j:'✦',t:'收到礼物的那一刻'},
+ {c:'scene-speech',i:'☁',j:'◌',t:'一句“怎么了”之后'},
+ {c:'scene-conflict',i:'⚡',j:'☕',t:'争执刚刚发生'},
+ {c:'scene-conflict',i:'🍜',j:'⚡',t:'先吃饭还是先讲道理'},
+ {c:'scene-conflict',i:'…',j:'▰',t:'客服式回复启动'},
+ {c:'scene-conflict',i:'📁',j:'↺',t:'矛盾是否真的过去'},
+ {c:'scene-life',i:'☼',j:'🛋',t:'空白的一天'},
+ {c:'scene-life',i:'🔑',j:'→',t:'出门之前'},
+ {c:'scene-life',i:'✈',j:'◌',t:'突然多出来的假期'},
+ {c:'scene-life',i:'☾',j:'⏰',t:'和地球不太一样的作息'},
+ {c:'scene-reality',i:'▣',j:'✦',t:'意外之财从天而降'},
+ {c:'scene-reality',i:'▤',j:'☁',t:'钱很多但很无聊'},
+ {c:'scene-reality',i:'⌂',j:'✈',t:'你羡慕哪一种生活'},
+ {c:'scene-reality',i:'⚖',j:'♡',t:'未来要怎么算'},
+ {c:'scene-heart',i:'◌',j:'👀',t:'第一次心动之后'},
+ {c:'scene-heart',i:'✉',j:'♡',t:'有人记得你说过的话'},
+ {c:'scene-heart',i:'⌕',j:'✦',t:'聊天记录开始变得重要'},
+ {c:'scene-zen',i:'🍵',j:'≈',t:'茶凉之前，不必回答'}
+];
+const sceneRender=renderQuestion;
+renderQuestion=function(){sceneRender();const meta=questionScenes[current]||questionScenes[0],box=$('questionScene');box.className=`question-scene ${meta.c}`;box.innerHTML=`<span class="scene-blob scene-blob-a">${meta.i}</span><span class="scene-blob scene-blob-b">${meta.j}</span><span class="scene-doodle">⌁</span>`;box.title=meta.t};

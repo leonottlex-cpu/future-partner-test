@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="未来对象人格预测测试：六维恋爱人格分析。" />
+  <title>未来对象人格预测测试</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section id="startScreen" class="screen start-screen">
+      <div class="eyebrow">LOVE ARCHIVE · 01</div>
+      <div class="hero-orbit" aria-hidden="true"><span>♡</span><span>✦</span><span>⌁</span></div>
+      <h1>你的TA<br><em>人格预测测试</em></h1>
+      <p class="lead">28道题，测出你在恋爱里到底是烟火、剑客，还是一只躲在门后的猫。</p>
+      <div class="intro-card">
+        <span class="intro-icon">✦</span>
+        <div><strong>六个维度</strong><small>亲密需求 · 情绪表达 · 冲突处理<br>生活节奏 · 现实价值 · 心动机制</small></div>
+      </div>
+      <button class="primary-btn" id="startBtn">开始鉴定 <span>→</span></button>
+      <p class="fine-print">这是一份娱乐性质的人格测试，不构成心理诊断。</p>
+    </section>
+
+    <section id="quizScreen" class="screen quiz-screen hidden">
+      <header class="quiz-header"><button class="icon-btn" id="quitBtn" aria-label="返回首页">×</button><span id="progressText">1 / 25</span><span class="archive-mark">♡</span></header>
+      <div class="progress-track"><div id="progressBar"></div></div>
+      <div class="question-wrap">
+        <div class="question-kicker" id="questionKicker">分流题 · 还不知道会遇见谁</div>
+        <div id="questionScene" class="question-scene" aria-hidden="true"></div>
+        <h2 id="questionText"></h2>
+        <div id="optionList" class="option-list"></div>
+      </div>
+      <footer class="quiz-footer"><button class="text-btn" id="backBtn" disabled>← 上一题</button><span>点击选项自动继续</span></footer>
+    </section>
+
+    <section id="resultScreen" class="screen result-screen hidden">
+      <header class="result-top"><button class="text-btn" id="restartTop">重新测试</button></header>
+      <div class="result-hero"><span class="result-code" id="resultCode" hidden>OBJECT PERSONA · P10</span><div class="result-badge">娱乐测试 · 不严谨但很具体</div><div class="persona-stack"><div class="persona-block"><div id="characterArt" class="character-art" aria-label="对象人格抽象漫画形象"><img id="characterImage" alt="" /><span>⚔</span></div><div class="identity-copy"><h1>你的TA是：<br><em id="resultName">独行者</em></h1><p id="englishName" class="english-name">LONE WOLF</p><p id="resultVerdict" class="verdict"></p></div></div><div class="and-divider">AND</div><div class="persona-block respondent-block"><div class="respondent-persona"><img id="respondentImage" alt="" /><div class="identity-copy"><h2>你的恋爱底色：<br><em id="respondentName">独行者</em></h2><p id="respondentEnglish" class="english-name">LONE WOLF</p><p id="respondentVerdict" class="verdict"></p></div></div></div></div><p class="result-fate-line">从两双眼睛相遇开始，缘分就完成了它的使命，剩下的都是事在人为</p></div>
+      <div class="result-card world-card"><div class="section-label">THE PERSON YOU MAY MEET</div><h2 id="resultWorldTitle">你的对象预测</h2><p id="resultWorldText"></p></div>
+      <div class="result-card tendency-card"><div class="section-label">YOUR SIX-DIMENSION TENDENCIES</div><h2>你的恋爱倾向</h2><p class="tendency-note">中间是 0，不代表好坏，只表示你更靠近哪一侧。</p><div id="dimensionLegend" class="tendency-list"></div></div>
+      <div class="result-card copy-card"><div class="section-label">THE FRIEND WHO KNOWS YOU</div><div class="description-columns"><article><h3>你的恋爱人格</h3><p id="respondentDescription"></p></article><article><h3>你的TA人格</h3><p id="objectDescription"></p></article></div><p id="resultDescription" hidden></p><div class="quote-box" id="resultQuote"></div></div>
+      <div class="result-card traits-card"><div class="section-label">GOOD / DANGEROUS</div><div class="trait-columns"><div><h3>你的优点</h3><p id="resultStrength"></p></div><div><h3>你的危险倾向</h3><p id="resultRisk"></p></div></div><div class="last-line"><span>最后一刀</span><strong id="resultFinal"></strong></div></div>
+      <div class="result-actions"><button class="primary-btn" id="shareBtn">保存结果截图 <span>↗</span></button><button class="secondary-btn" id="restartBtn">再测一次</button></div>
+      <p class="fine-print result-note">结果来自你的答题倾向，仅供娱乐。真正的你，永远比一个标签复杂。</p>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+  <script src="world-questions.js"></script>
+  <script src="question-scenes.js"></script>
+  <script src="results-copy.js"></script>
+  <script src="character-names.js"></script>
+  <script src="character-images.js"></script>
+  <script src="screenshot.js"></script>
+</body>
+</html>
